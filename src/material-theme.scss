@@ -5,6 +5,19 @@
 // Learn more about theming and how to use it for your application's
 // custom components at https://material.angular.dev/guide/theming
 @use '@angular/material' as mat;
+:root {
+  @include mat.toolbar-overrides((
+    container-background-color: #1E293B,
+    container-text-color: #E5E7EB,
+  ));
+   @include mat.icon-overrides((
+    color: #E5E7EB,
+  ));
+  @include mat.sidenav-overrides((
+    container-background-color: #1E293B,
+    container-text-color: #E5E7EB,
+  ));
+}
 
 html {
   height: 100%;

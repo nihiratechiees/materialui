@@ -1,0 +1,36 @@
+<mat-toolbar>
+  <button matIconButton (click)="drawer.toggle()" class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Angular 21 Tutorial</span>
+  <span class="example-spacer"></span>
+  <button matIconButton class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button matIconButton class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" opened="true" mode="side" position="start">
+    <mat-nav-list>
+      <mat-list-item>
+        <button routerLink="" matButton="text"><mat-icon>dashboard</mat-icon> Dashboard</button>
+      </mat-list-item>
+      <mat-list-item>
+        <button routerLink="analytics" matButton="text"><mat-icon>analytics</mat-icon> Analysis</button>
+      </mat-list-item>
+      <mat-list-item>
+        <button routerLink="settings" matButton="text"><mat-icon>settings</mat-icon> Settings</button>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div style="min-height: 600px;text-align: center;">
+      <router-outlet></router-outlet>
+    </div>
+
+  </mat-drawer-content>
+
+</mat-drawer-container>
