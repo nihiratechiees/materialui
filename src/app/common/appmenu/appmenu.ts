@@ -4,7 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-appmenu',
@@ -15,5 +15,13 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   styleUrl: './appmenu.css',
 })
 export class Appmenu {
+  constructor(private router: Router) {
+
+  }
+  logout() {
+    localStorage.removeItem('username');
+    alert('You have been logged out.');
+    this.router.navigate(['/login']);
+  }
 
 }

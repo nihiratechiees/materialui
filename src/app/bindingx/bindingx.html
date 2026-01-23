@@ -1,0 +1,11 @@
+<input type="text" (keyup)="keyup()" [value]="channelname" [disabled]="ischecked" />
+<br/>
+<input type="checkbox" [(ngModel)]="ischecked" (change)="change()" />
+<br>
+
+<img [src]="imagepath" style="width: 200px;height: 200px;" />
+<h1>{{ischecked}}</h1>
+<input type="text" value="{{coursename}}" disabled="{{ischecked}}" />
+
+<button (click)="Click()">Click</button>
+<input type="text" [(ngModel)]="channelname" />
