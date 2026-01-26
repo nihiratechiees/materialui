@@ -1,0 +1,20 @@
+<h1>{{apptitle()}}</h1>
+
+<div>
+    <input type="text" #title placeholder="Enter Title" />
+    <button (click)="changeTitle(title.value)">Update Title</button>
+</div>
+<div>
+    <ul style="width: 200px;">
+        @for(course of courses(); track course) {
+        <li>{{course}}</li>
+        }
+    </ul>
+</div>
+
+<div>
+    <input type="text" #course placeholder="Enter Course" />
+    <button (click)="Addcourse(course.value)">Add Course</button>
+</div>
+
+<h3>Total Courses: {{totalcourse() *3}}</h3>

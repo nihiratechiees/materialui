@@ -11,6 +11,8 @@ import { authcGuard } from './Guard/authc-guard';
 import { authdGuard } from './Guard/authd-guard';
 import { authmGuard } from './Guard/authm-guard';
 import { Status } from './status/status';
+import { Learnsignal } from './signal/learnsignal/learnsignal';
+import { Product } from './signal/product/product';
 
 export const routes: Routes = [
     {
@@ -32,6 +34,12 @@ export const routes: Routes = [
     },
     {
         path: 'login', component: Login,canDeactivate: [authdGuard]
+    },
+    {
+        path:'signal',component:Learnsignal
+    },
+     {
+        path:'product',component:Product
     },
     {
         path: '**', component:Status

@@ -1,0 +1,30 @@
+<h1>{{title()}}</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>      
+        @for(product of products(); track product.code) {
+        <tr>
+            <td>{{product.code}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price | currency}}</td>
+            <td><button (click)="deleteProduct(product.code)">Delete</button>
+            <button (click)="editProduct(product.code)">Edit</button>
+            </td>
+        </tr>
+        }
+</table>
+
+<div>
+    <input type="text" [(ngModel)]="code" placeholder="Enter Product Code" />
+    <input type="text" [(ngModel)]="name" placeholder="Enter Product Name" />
+    <input type="number" [(ngModel)]="price" placeholder="Enter Product Price" />
+    <button (click)="addProduct()">{{btntext()}}</button>
+</div>
