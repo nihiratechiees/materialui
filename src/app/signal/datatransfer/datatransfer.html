@@ -1,0 +1,14 @@
+<div>
+    <h1>Data Transfer Example</h1>
+    <label>Height:</label>
+    <input type="text" [(ngModel)]="inputheight" />
+    <label>Width:</label>
+    <input type="text" [(ngModel)]="inputwidth" />
+    <div>
+        <h3>We received channel name: {{receivedname}}</h3>
+    </div>
+</div>
+<div>
+    <app-child [H]="inputheight" [W]="inputwidth"  (CN)="receiveChannelName($event)"></app-child>    
+    
+</div>

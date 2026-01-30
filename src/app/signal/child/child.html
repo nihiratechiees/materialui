@@ -1,0 +1,6 @@
+<div>
+    <h2>Calculated area is : {{area()}}</h2>
+    <label>Channel name:</label>
+    <input type="text" #channelName />
+    <button (click)="sendData(channelName.value)">Send data</button>
+</div>

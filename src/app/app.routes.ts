@@ -13,6 +13,7 @@ import { authmGuard } from './Guard/authm-guard';
 import { Status } from './status/status';
 import { Learnsignal } from './signal/learnsignal/learnsignal';
 import { Product } from './signal/product/product';
+import { Datatransfer } from './signal/datatransfer/datatransfer';
 
 export const routes: Routes = [
     {
@@ -27,21 +28,24 @@ export const routes: Routes = [
         path: 'analytics', component: Analytic, canActivate: [authGuard]
     },
     {
-        path: 'settings', component: Setting,canMatch: [authmGuard]
+        path: 'settings', component: Setting, canMatch: [authmGuard]
     },
     {
         path: 'binding', component: Bindingx
     },
     {
-        path: 'login', component: Login,canDeactivate: [authdGuard]
+        path: 'login', component: Login, canDeactivate: [authdGuard]
     },
     {
-        path:'signal',component:Learnsignal
-    },
-     {
-        path:'product',component:Product
+        path: 'signal', component: Learnsignal
     },
     {
-        path: '**', component:Status
+        path: 'product', component: Product
+    },
+    {
+        path: 'transfer', component: Datatransfer
+    },
+    {
+        path: '**', component: Status
     }
 ];
