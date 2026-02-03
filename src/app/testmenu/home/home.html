@@ -3,3 +3,10 @@
 <button routerLink="/admin">Admin</button>
 <button routerLink="/user">User</button>
 <router-outlet></router-outlet>
+
+<ul>
+    @for(course of courselist();track course.id) {
+    <li>{{course.name}}</li>
+    }
+</ul>
+<button (click)="createcourse()">create</button>
