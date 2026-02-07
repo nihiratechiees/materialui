@@ -14,6 +14,7 @@ import { Status } from './status/status';
 import { Learnsignal } from './signal/learnsignal/learnsignal';
 import { Product } from './signal/product/product';
 import { Datatransfer } from './signal/datatransfer/datatransfer';
+import { Lifecyclex } from './lifecyclex/lifecyclex';
 
 export const routes: Routes = [
     {
@@ -44,6 +45,9 @@ export const routes: Routes = [
     },
     {
         path: 'transfer', component: Datatransfer
+    },
+    {
+        path: 'lifecycle', component: Lifecyclex
     },
     {
         path: '**', component: Status
