@@ -1,4 +1,4 @@
-import { Component, computed, input, output } from '@angular/core';
+import { Component, computed, input, output, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -18,5 +18,19 @@ export class Child {
     //
     this.chName.emit(channelName);
   }
+
+  // ngOnChanges(change:SimpleChanges) {
+  //   console.log('ngOnChanges called');
+  //   if(change['height']) {
+  //     console.log('Current value is : '+change['height'].currentValue);
+  //   console.log('Previous value is : '+change['height'].previousValue);
+  //   console.log('First change is : '+change['height'].firstChange);
+  //   }
+   
+  // }
+
+  // ngDoCheck() {
+  //   console.log('ngDoCheck called');
+  // }
 
 }

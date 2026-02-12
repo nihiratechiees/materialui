@@ -19,4 +19,23 @@ export class Datatransfer {
     this.receivedname = channelName;
   }
 
+  ngOnInit() {
+    console.log('ngOnInit called');
+  }
+
+  ngAfterViewInit() {
+    console.log('ngAfterViewInit called');
+  }
+  ngAfterViewChecked() {
+    console.log('ngAfterViewChecked called');
+  }
+
+  ngAfterContentInit() {
+    console.log('ngAfterContentInit called');
+  }
+  ngAfterContentChecked() {
+    console.log('ngAfterContentChecked called');
+  }
+
+
 }

@@ -6,6 +6,15 @@ import { Component } from '@angular/core';
   templateUrl: './lifecyclex.html',
   styleUrl: './lifecyclex.css',
 })
-export class Lifecyclex {
+export class Lifecyclex{
+
+  ngOnInit() {
+    console.log('ngOnInit called');
+  }
+
+  ngOnDestroy() {
+    console.log('ngOnDestroy called');
+  }
+  
 
 }
