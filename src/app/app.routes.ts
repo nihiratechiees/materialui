@@ -15,6 +15,7 @@ import { Learnsignal } from './signal/learnsignal/learnsignal';
 import { Product } from './signal/product/product';
 import { Datatransfer } from './signal/datatransfer/datatransfer';
 import { Lifecyclex } from './lifecyclex/lifecyclex';
+import { Tempform } from './tempform/tempform';
 
 export const routes: Routes = [
     {
@@ -49,6 +50,7 @@ export const routes: Routes = [
     {
         path: 'lifecycle', component: Lifecyclex
     },
+    {path: 'tempform', component: Tempform},
     {
         path: '**', component: Status
     }
