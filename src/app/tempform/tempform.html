@@ -1,1 +1,47 @@
 <h2>Template Driven Form Example</h2>
+<form #userform="ngForm" (ngSubmit)="OnSubmit(userform)">
+  <label for="firstname">First Name</label>
+  <input #firstname="ngModel" class="form-control" type="text" [(ngModel)]="userobj.firstname" name="firstname" required>
+  @if(firstname.invalid && firstname.touched){
+  <div class="error">First name is required</div>
+  }
+  
+  <br>
+  <label for="lastname">Last Name</label>
+  <input #lastname="ngModel" class="form-control" type="text" [(ngModel)]="userobj.lastname" name="lastname" required>
+  @if(lastname.invalid && lastname.touched){
+  <div class="error">Last name is required</div>
+  } 
+  <br>
+  <label for="email">Email</label>
+  <input #email="ngModel" class="form-control"  type="email" [(ngModel)]="userobj.email" name="email" required email>
+  @if(email.invalid && email.touched){
+  <div class="error">Email is required and must be valid</div>
+  }
+  
+  <br>
+  <label for="gender">Gender</label>
+  <select #gender="ngModel" class="form-control" name="gender" [(ngModel)]="userobj.gender" required>
+    <option value="">Select Gender</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+  @if(gender.invalid && gender.touched){
+  <div class="error">Gender is required</div>
+  }
+  <br>
+  <div ngModelGroup="addr">
+<label for="address">Address</label>
+  <input #address="ngModel" class="form-control"  type="text" [(ngModel)]="userobj.address" name="address" required>
+  @if(address.invalid && address.touched){
+  <div class="error">Address is required</div>
+  }
+  </div>
+   
+
+  <button  type="submit" [disabled]="userform.invalid">Submit</button>
+</form>
+
+<div>
+  <p>{{userobj | json}}</p>
+</div>

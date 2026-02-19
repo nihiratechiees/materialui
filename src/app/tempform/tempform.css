@@ -1,0 +1,35 @@
+
+input, select {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+form{
+    width: 50%;
+    margin: auto;
+    border: 1px solid black;
+    margin-top: 5px;
+}
+button{
+    margin-top: 10px;
+    padding: 10px 20px;
+    margin: 1%;
+    width: 20%;
+
+}
+button:disabled{
+    background-color: grey;
+    color: white;
+}
+.btn-primary{
+    background-color: blue;
+    color: white;
+}
+.form-control{
+    margin-bottom: 10px;
+}
+.error{
+    color: red;
+    font-size: 12px;
+}
