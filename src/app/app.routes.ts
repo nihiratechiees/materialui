@@ -16,6 +16,8 @@ import { Product } from './signal/product/product';
 import { Datatransfer } from './signal/datatransfer/datatransfer';
 import { Lifecyclex } from './lifecyclex/lifecyclex';
 import { Tempform } from './tempform/tempform';
+import { LoginTDF } from './login-tdf/login-tdf';
+import { RegisterTDF } from './register-tdf/register-tdf';
 
 export const routes: Routes = [
     {
@@ -50,7 +52,15 @@ export const routes: Routes = [
     {
         path: 'lifecycle', component: Lifecyclex
     },
-    {path: 'tempform', component: Tempform},
+    {
+        path: 'tempform', component: Tempform
+    },
+    {
+        path: 'logintdf', component: LoginTDF
+    },
+    {
+        path: 'registertdf', component: RegisterTDF
+    },
     {
         path: '**', component: Status
     }
